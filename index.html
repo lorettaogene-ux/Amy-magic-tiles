@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Amy Magic Tiles</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="game-app">
+        
+        <!-- HEADER HUD -->
+        <div id="hud-header">
+            <div id="song-banner">
+                <span class="music-icon">🎵</span>
+                <span id="song-title-display">Jingle Bells</span>
+            </div>
+            <div id="score-container">
+                <span id="score-label">SCORE</span>
+                <span id="score-value">0</span>
+            </div>
+        </div>
+
+        <!-- START / MENU OVERLAY -->
+        <div id="start-overlay" class="overlay">
+            <div class="logo-box">
+                <h1 class="game-title">Amy Magic Tiles</h1>
+                <p class="game-subtitle">✨ Christmas Edition ✨</p>
+            </div>
+
+            <!-- SONG SELECTOR -->
+            <div class="song-select-box">
+                <label for="song-select">Choose Christmas Track:</label>
+                <select id="song-select">
+                    <option value="jingle">🔔 Jingle Bells</option>
+                    <option value="wish">🎄 We Wish You a Merry Christmas</option>
+                    <option value="silent">⭐ Silent Night</option>
+                </select>
+            </div>
+
+            <button id="start-btn" class="pink-glow-btn">PLAY GAME ✨</button>
+        </div>
+
+        <!-- GAME OVER OVERLAY -->
+        <div id="gameover-overlay" class="overlay hidden">
+            <h2 class="gameover-title">Game Over!</h2>
+            <div class="final-score-box">
+                <p>Final Score</p>
+                <h3 id="final-score-value">0</h3>
+            </div>
+            <button id="restart-btn" class="pink-glow-btn">TRY AGAIN 🔄</button>
+            <button id="menu-btn" class="secondary-btn">MAIN MENU 🏠</button>
+        </div>
+
+        <!-- RHYTHM TILE CANVAS / LANES -->
+        <div id="lanes-container">
+            <div class="lane" data-lane="0"><div class="lane-line"></div></div>
+            <div class="lane" data-lane="1"><div class="lane-line"></div></div>
+            <div class="lane" data-lane="2"><div class="lane-line"></div></div>
+            <div class="lane" data-lane="3"><div class="lane-line"></div></div>
+            
+            <!-- HIT ZONE TARGET BAR -->
+            <div id="hit-zone"></div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
